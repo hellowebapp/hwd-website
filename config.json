@@ -1,0 +1,8 @@
+{
+    "port":8857, 
+    "prettify": true,
+    "site-url": "https://hellowebdesignbook.com",
+    "optimize": [
+        "css"
+    ]
+}
