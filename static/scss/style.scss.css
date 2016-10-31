@@ -3749,9 +3749,11 @@ form input {
 
 @media screen and (max-width: 600px) {
   h1 img {
-    content: url("../images/hellowebdesign-sm.png"); }
+    content: url("../images/hellowebdesign-sm.svg"); }
   br {
-    content: ' '; } }
+    content: ' '; }
+  input[type="submit"] {
+    margin-top: 5px; } }
 
 .copy {
   font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
