@@ -3748,6 +3748,8 @@ form input {
       max-width: 400px; }
 
 @media screen and (max-width: 600px) {
+  #landing-page {
+    padding-top: 5rem; }
   h1 img {
     content: url("../images/hellowebdesign-sm.svg"); }
   br {
