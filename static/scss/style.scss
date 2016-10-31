@@ -1,13 +1,13 @@
 // bootstrap variable overrides
 $font-family-sans-serif:     'Source Sans Pro', Helvetica, Arial, sans-serif !default;
-$font-family-serif:          "freight-text-pro", Georgia, "Times New Roman", Times, serif !default;
-$font-family-display:        "MrsOnion-Regular", Georgia, cursive;
+$font-family-serif:          Georgia, "Times New Roman", Times, serif !default;
+$font-family-display:        Georgia, cursive;
 $font-family-display-alt:    "Open Sans Condensed", "Source Sans Pro", Helvetica, Arial, sans-serif !default;
 $font-family-base:           $font-family-serif !default;
 $headings-font-weight:       300 !default;
 $font-size-base:             1.3rem !default;
 
-$body-color:                 #666 !default;
+$body-color:                 #fff !default;
 $headings-color:             #111 !default;
 $enable-rounded:             true !default;
 $border-radius:              0 !default;
@@ -22,10 +22,10 @@ $gray-superlight:            #e1e1e1;
 $default-banner:             #eceeef;
 //$default-banner:             lighten(#8a9a0f, 40%);
 
-$link-color:                 $brand-primary-dark;
+$link-color:                 #fff;
 
 $btn-border-radius:          0;
-//$btn-secondary-color:        #fff;
+$btn-secondary-color:        $brand-primary;
 //$btn-secondary-border:       #fff !default;
 $btn-font-weight:            400 !default;
 $btn-padding-x:              1.2rem;
@@ -46,6 +46,8 @@ $btn-padding-y:              1rem;
 body { 
     background-color: $brand-secondary; 
     font-weight: 300; 
+    color: #fff;
+    color: rgba(255,255,255,0.95);
 }
 
 @include media-breakpoint-down(sm) {
@@ -153,18 +155,14 @@ dd {
 a {
     text-decoration: none;
     color: $body-color;
-    //background-image: linear-gradient(#fff 50%, $body-color 50%);
-    background-image: linear-gradient(to top,
-        rgba(0,0,0,0) 11%,
-        rgba(0,0,0,.3) 11%,
-        rgba(0,0,0,.3) 16%,
-        rgba(0,0,0,0) 16%
-    );
-    //background-repeat: repeat-x;
+    font-weight: bold;
+    color: rgba(255,255,255,0.9);
     &:hover {
-        color: $brand-primary-dark;
+        color: #fff;
         //background-image: linear-gradient(#fff 50%, $brand-primary-dark 50%);
         text-decoration: none;
+        border-bottom: 1px solid #fff;
+        border-bottom: 1px solid rgba(255,255,255,0.5);
     }
     //&:visited {
     //    color: $brand-primary;
@@ -259,3 +257,42 @@ form input {
     font-size: 1rem;
     margin-bottom: 5px;
 }
+
+/* LANDING PAGE */
+#landing-page {
+    padding-top: 10rem;
+    text-align: center;
+    font-family: $font-family-sans-serif;
+    label { display: none; }
+    p, .btn {
+        -webkit-font-smoothing: antialiased;
+        -moz-font-smoothing: antialiased;
+        -o-font-smoothing: antialiased;
+    }
+    form {
+        margin: 4rem 0;
+        input[type="email"] {
+            padding: 0.8em 1.3em;
+            width: 100%;
+            max-width: 400px;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    h1 img {
+        content:url("../images/hellowebdesign-sm.png");
+    }
+    br { content: ' '; }
+}
+
+
+.copy {
+    @extend .small-sans;
+    font-family: $font-family-sans-serif;
+    font-size: .7rem;
+    letter-spacing: 0.2em;
+}
+
+.social-media a:hover { border-bottom: 0; }
+
