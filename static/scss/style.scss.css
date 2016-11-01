@@ -3757,7 +3757,8 @@ form input {
 .copy {
   font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
   font-size: .7rem;
-  letter-spacing: 0.2em; }
+  letter-spacing: 0.2em;
+  margin-bottom: 2rem; }
 
 .social-media a:hover {
   border-bottom: 0; }
